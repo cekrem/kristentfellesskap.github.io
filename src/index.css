@@ -24,10 +24,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -38,7 +34,11 @@ h2 {
   font-size: 2em;
 }
 
-h1, h2, p {
+h3 {
+  font-size: 1em;
+}
+
+h1, h2, h3, p {
   line-height: 1;
   margin: 0.25em;
 }
