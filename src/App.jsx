@@ -26,7 +26,7 @@ const App = () => {
   return (
     <>
       <section>
-        <img src={logo} className="logo" alt="Logo" />
+        <img src={logo} className="logo pulse" alt="Logo" />
 
         <div className="title">
           <h1>Kristent Fellesskap</h1>
@@ -35,8 +35,8 @@ const App = () => {
 
         <div className="description">
           <p>
-            Vi er disipler av Jesus som samles jevnlig til fellesskap med Gud og
-            med hverandre.
+            Vi er disipler av <span className="pulse">Jesus</span> som samles
+            jevnlig til fellesskap med Gud og med hverandre.
           </p>
           <hr />
         </div>

@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+span {
+  display: inline-block;
+}
+
 a {
   font-weight: 500;
   color: gray;
