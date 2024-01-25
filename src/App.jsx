@@ -7,7 +7,7 @@ const links = [
   {
     text: "Vi tror",
     iconClass: "fa fa-book-bible",
-    url: "/vi-tror",
+    url: "#vi-tror",
   },
   {
     text: "Podcast",
@@ -25,7 +25,7 @@ const App = () => (
   <Routes>
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
-      <Route path="/vi-tror" element={<Creed />} />
+      <Route path="vi-tror" element={<Creed />} />
     </Route>
   </Routes>
 );
