@@ -1,12 +1,12 @@
-import logo from "./assets/logo.png";
-
-export const Home = () => <></>;
+export const Home = () => (
+  <p>
+    Vi er disipler av <span className="pulse">Jesus</span> som samles jevnlig
+    til fellesskap med Gud og med hverandre.
+  </p>
+);
 
 export const Creed = () => (
-  <div className="modal blur-in">
-    <a href="/">
-      <img src={logo} className="logo pulse" alt="Logo" />
-    </a>
+  <>
     <h3>
       Vi tror på <span className="pulse">Gud</span>, han som skapte himmelen og
       jorden
@@ -74,5 +74,5 @@ export const Creed = () => (
       forsamlingen av de troende er det hans hjerteslag som gir liv, glede og
       fred!
     </p>
-  </div>
+  </>
 );

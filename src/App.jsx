@@ -1,6 +1,6 @@
 import logo from "./assets/logo.png";
 import "./App.css";
-import { Outlet, Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes, useLocation } from "react-router-dom";
 import { Creed, Home } from "./Content.jsx";
 
 const links = [
@@ -29,35 +29,41 @@ const App = () => (
     </Route>
   </Routes>
 );
-const Layout = () => (
-  <>
-    <section>
-      <img src={logo} className="logo pulse-and-blur-in" alt="Logo" />
+const Layout = () => {
+  const { pathname } = useLocation();
+  const hashPath = pathname.replace("/", "#");
 
-      <div className="title">
-        <h1>Kristent Fellesskap</h1>
-        <h2>Indre Østfold</h2>
-      </div>
+  return (
+    <>
+      <section>
+        <a href="/">
+          <img src={logo} className="logo pulse-and-blur-in" alt="Logo" />
+        </a>
 
-      <div className="content">
-        <p>
-          Vi er disipler av <span className="pulse">Jesus</span> som samles
-          jevnlig til fellesskap med Gud og med hverandre.
-        </p>
-        <hr />
-        <Outlet />
-      </div>
+        <div className="title">
+          <h1>Kristent Fellesskap</h1>
+          <h2>Indre Østfold</h2>
+        </div>
 
-      <div className="links">
-        {links.map(({ iconClass, url, text }) => (
-          <a key={url} className="icon-link" href={url}>
-            <i className={iconClass}></i>
-            {text}
-          </a>
-        ))}
-      </div>
-    </section>
-  </>
-);
+        <div className="content">
+          <Outlet />
+        </div>
+
+        <div className="links">
+          {links.map(({ iconClass, url, text }) => (
+            <a
+              key={url}
+              className={hashPath === url ? "icon-link active" : "icon-link"}
+              href={url}
+            >
+              <i className={iconClass}></i>
+              {text}
+            </a>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default App;
