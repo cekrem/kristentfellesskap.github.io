@@ -26,7 +26,6 @@ section {
 .pulse {
   will-change: filter, transform;
   animation: pulse 4s 2s infinite;
-  color: #ff4a4aff;
 }
 
 .blur-in {
