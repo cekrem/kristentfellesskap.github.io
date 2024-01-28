@@ -75,17 +75,17 @@ section {
 
 .links {
   width: 100%;
-  background-color: #242424;
+  background-color: #242424ee;
   padding: 1em;
   max-width: 768px;
-  border-top: thin solid gray;
+  border-top: thin solid #80808044;
   position: sticky;
   bottom: 0;
 }
 
 @media (prefers-color-scheme: light) {
   .links {
-    background-color: #ffffff;
+    background-color: #ffffffee;
   }
 }
 
