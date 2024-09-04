@@ -1,8 +1,25 @@
 export const Home = () => (
-  <p>
-    Vi er disipler av <span className="pulse">Jesus</span> som samles jevnlig
-    til fellesskap med Gud og med hverandre.
-  </p>
+  <>
+    <p>
+      Vi er disipler av <span className="pulse">Jesus</span> som samles jevnlig
+      til fellesskap med Gud og med hverandre.
+    </p>
+    <p>
+      Her er datoer for gudstjenester på Knapstad Arena høsten 2024
+      <ul>
+        <li>8. september, kl 16</li>
+        <li>6. oktobe, kl 16r</li>
+        <li>3. novembe, kl 16r</li>
+        <li>8. desembe, kl 16r</li>
+      </ul>
+      Husmenighetene våre samles også jevnlig, og vi har grupper for kvinner
+      (oddetallsuker) og menn (partallsuker) på torsdager. Ta kontakt med{" "}
+      <a href="tel:+4792943011">Livia (+47 92943011)</a> eller{" "}
+      <a href="tel:+4745806589">Christian (+47 45806589)</a> hvis du vil bli
+      med!
+    </p>
+    <p>Velkommen!</p>
+  </>
 );
 
 export const Creed = () => (
