@@ -1,5 +1,5 @@
 export const Home = () => (
-  <>
+  <div className="content">
     <p>
       Vi er disipler av <span className="pulse">Jesus</span> som samles jevnlig
       til fellesskap med Gud og med hverandre.
@@ -13,17 +13,17 @@ export const Home = () => (
         <li>8. desember, kl 16</li>
       </ul>
       Husmenighetene våre har egne samlinger, og vi har grupper for kvinner
-      (oddetallsuker) og menn (partallsuker) på torsdager. Ta kontakt med{" "}
-      <a href="tel:+4792943011">Livia (+47 92943011)</a> eller{" "}
+      (oddetallsuker) og menn (partallsuker) på torsdager. Ta kontakt med{' '}
+      <a href="tel:+4792943011">Livia (+47 92943011)</a> eller{' '}
       <a href="tel:+4745806589">Christian (+47 45806589)</a> hvis du vil bli
       med!
     </p>
     <p>Velkommen!</p>
-  </>
+  </div>
 );
 
 export const Creed = () => (
-  <>
+  <div className="content">
     <h3>
       Vi tror på <span className="pulse">Gud</span>, han som skapte himmelen og
       jorden
@@ -37,7 +37,7 @@ export const Creed = () => (
       Vi tror at <span className="pulse">Bibelen</span> er Guds ord
     </h3>
     <p>
-      {" "}
+      {' '}
       Hver bok er innblåst av Gud, full av liv og sannhet. Bibelen lærer oss
       hvem Gud er, hvem vi er, og hvordan han lengter etter å sette alt i rett
       stand igjen.
@@ -72,7 +72,7 @@ export const Creed = () => (
     </p>
 
     <h3>
-      Vi tror at Jesus gir mennesker en ny start og et{" "}
+      Vi tror at Jesus gir mennesker en ny start og et{' '}
       <span className="pulse">nytt liv</span>
     </h3>
     <p>
@@ -82,7 +82,7 @@ export const Creed = () => (
     </p>
 
     <h3>
-      Vi tror at vi kan kjenne og erfare Jesus{" "}
+      Vi tror at vi kan kjenne og erfare Jesus{' '}
       <span className="pulse">i dag</span>
     </h3>
     <p>
@@ -91,5 +91,5 @@ export const Creed = () => (
       forsamlingen av de troende er det hans hjerteslag som gir liv, glede og
       fred!
     </p>
-  </>
+  </div>
 );

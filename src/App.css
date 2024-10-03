@@ -67,6 +67,7 @@ section {
   text-align: justify;
   margin: 1em auto;
   max-width: 768px;
+  width: 100%;
 }
 
 .modal > * {
@@ -90,6 +91,7 @@ section {
 }
 
 .icon-link {
+  cursor: pointer;
   font-weight: 500;
   color: gray;
   text-decoration: inherit;
@@ -100,7 +102,12 @@ section {
   display: inline-block;
 }
 
-.icon-link:hover, .icon-link.active {
+.icon-link.block {
+  display: block;
+}
+
+.icon-link:hover,
+.icon-link.active {
   color: #ff4a4a;
   transform: scale(1.1);
   filter: drop-shadow(0 0 2em #ff4a4a);
@@ -108,4 +115,21 @@ section {
 
 .icon-link > i {
   margin: 0.5em;
+}
+
+.weekdays {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.weekday {
+  padding: 0.5em;
+  width: 15em;
+  text-align: justify;
+  white-space: nowrap;
+  margin: 1em auto;
+  border-radius: 0.5em;
+  box-shadow: 0 0 4px #80808040;
 }
