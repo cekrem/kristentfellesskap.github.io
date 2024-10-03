@@ -3,6 +3,7 @@ import './App.css';
 import logo from './assets/logo.png';
 import Prayer from './Prayer';
 import { Creed, Home } from './Content.jsx';
+import { LoginButton, LogoutButton } from './firebase/authStateComponents.jsx';
 
 const links = [
   {
@@ -27,10 +28,11 @@ const App = () => (
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="vi-tror" element={<Creed />} />
-      <Route path="prayer" element={<Prayer />} />
+      <Route path="bonn" element={<Prayer />} />
     </Route>
   </Routes>
 );
+
 const Layout = () => {
   const { pathname } = useLocation();
   const hashPath = pathname.replace('/', '#');
@@ -62,6 +64,12 @@ const Layout = () => {
               {text}
             </a>
           ))}
+          {pathname === '/bonn' && (
+            <>
+              <LoginButton />
+              <LogoutButton />
+            </>
+          )}
         </div>
       </section>
     </>

@@ -1,26 +1,21 @@
-import { LoginButton, LogoutButton } from './firebase/authStateComponents.jsx';
 import Weekday from './Weekday.jsx';
 
 const Prayer = () => (
-  <>
-    <div className="weekdays">
-      {week.map((day) => (
-        <Weekday key={day} day={day} />
-      ))}
-    </div>
-    <LoginButton />
-    <LogoutButton />
-  </>
+  <div className="weekdays">
+    {week.map((day) => (
+      <Weekday key={day} day={day} />
+    ))}
+  </div>
 );
 
 const week = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday',
+  'Mandag',
+  'Tirsdag',
+  'Onsdag',
+  'Torsdag',
+  'Fredag',
+  'Lørdag',
+  'Søndag',
 ];
 
 export default Prayer;

@@ -76,9 +76,9 @@ section {
 
 .links {
   width: 100%;
-  background-color: #242424ee;
+  background-color: #242424dd;
   padding: 1em;
-  max-width: 768px;
+  max-width: 960px;
   border-top: thin solid #80808044;
   position: sticky;
   bottom: 0;
@@ -86,7 +86,7 @@ section {
 
 @media (prefers-color-scheme: light) {
   .links {
-    background-color: #ffffffee;
+    background-color: #ffffffcc;
   }
 }
 
@@ -102,10 +102,6 @@ section {
   display: inline-block;
 }
 
-.icon-link.block {
-  display: block;
-}
-
 .icon-link:hover,
 .icon-link.active {
   color: #ff4a4a;
@@ -119,6 +115,7 @@ section {
 
 .weekdays {
   width: 100%;
+  max-width: 960px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -126,10 +123,11 @@ section {
 
 .weekday {
   padding: 0.5em;
-  width: 15em;
+  min-width: 15em;
   text-align: justify;
   white-space: nowrap;
-  margin: 1em auto;
+  margin: 1em;
+  flex: 1;
   border-radius: 0.5em;
-  box-shadow: 0 0 4px #80808040;
+  box-shadow: 0 0 4px #808080;
 }

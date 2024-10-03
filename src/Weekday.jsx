@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
+import Adjuster from './Adjuster';
+import { IfLoggedIn } from './firebase/authStateComponents';
 import { useAuth } from './firebase/useAuth';
 import { useDatabase } from './firebase/useDatabase';
-import { IfLoggedIn } from './firebase/authStateComponents';
-import Adjuster from './Adjuster';
 
 const Weekday = ({ day }) => {
   const [, user] = useAuth();
@@ -19,10 +19,28 @@ const Weekday = ({ day }) => {
     }))
     .filter(({ minutes }) => minutes > 0);
 
+  const totalMinutes = entries.reduce((acc, { minutes }) => acc + minutes, 0);
+
   return (
-    <div className="weekday">
+    <div
+      className="weekday"
+      style={{
+        backgroundColor: `rgba(57, 255, 20, ${totalMinutes / 1440})`,
+      }}
+    >
       <div>
-        <b>{day}</b>
+        <b>
+          {day}{' '}
+          {!loading && (
+            <span
+              style={{
+                color: totalMinutes === 0 ? 'red' : 'inherit',
+              }}
+            >
+              ({totalMinutes} min)
+            </span>
+          )}
+        </b>
         <IfLoggedIn>
           <Adjuster
             style={{ float: 'right' }}

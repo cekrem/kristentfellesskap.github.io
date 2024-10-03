@@ -29,7 +29,7 @@ export const LoginButton = () => {
   return (
     <IfLoggedOut>
       <div className="icon-link block" onClick={() => logIn()}>
-        <i className="fa fa-google" aria-hidden="true"></i>Log in
+        <i className="fa fa-google" aria-hidden="true"></i>Logg inn
       </div>
     </IfLoggedOut>
   );
@@ -40,7 +40,7 @@ export const LogoutButton = () => {
   return (
     <IfLoggedIn>
       <div className="icon-link block" onClick={() => logout()}>
-        <i className="fa fa-google" aria-hidden="true"></i>Log out
+        <i className="fa fa-google" aria-hidden="true"></i>Logg ut
       </div>
     </IfLoggedIn>
   );

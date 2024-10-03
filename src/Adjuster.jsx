@@ -16,7 +16,7 @@ const Adjuster = ({ schedule, updateSchedule, className, style }) => (
       type="button"
       onClick={() =>
         updateSchedule({
-          minutes: (Number(schedule?.minutes) || 0) + 15,
+          minutes: Math.min((Number(schedule?.minutes) || 0) + 15, 1440),
         })
       }
     >
