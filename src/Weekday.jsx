@@ -3,6 +3,7 @@ import Adjuster from './Adjuster';
 import { IfLoggedIn } from './firebase/authStateComponents';
 import { useAuth } from './firebase/useAuth';
 import { useDatabase } from './firebase/useDatabase';
+import './Weekday.css';
 
 const Weekday = ({ day }) => {
   const [, user] = useAuth();

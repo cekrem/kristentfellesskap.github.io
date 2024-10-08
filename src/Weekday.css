@@ -1,0 +1,18 @@
+.weekdays {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.weekday {
+  padding: 0.5em;
+  min-width: 15em;
+  text-align: justify;
+  white-space: nowrap;
+  margin: 1em;
+  flex: 1;
+  border-radius: 0.5em;
+  box-shadow: 0 0 4px #808080;
+}

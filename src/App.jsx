@@ -28,7 +28,7 @@ const App = () => (
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="vi-tror" element={<Creed />} />
-      <Route path="bonn" element={<Prayer />} />
+      <Route path="shulamite" element={<Prayer />} />
     </Route>
   </Routes>
 );
@@ -64,7 +64,7 @@ const Layout = () => {
               {text}
             </a>
           ))}
-          {pathname === '/bonn' && (
+          {pathname === '/shulamite' && (
             <>
               <LoginButton />
               <LogoutButton />

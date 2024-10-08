@@ -1,0 +1,231 @@
+.walls {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 960px;
+  height: 400px;
+  margin-bottom: 2em;
+  background: linear-gradient(to bottom, #87ceeb, #e0f6ff);
+  border-bottom: 20px solid #8b4513;
+  position: relative;
+  padding-top: 50px;
+}
+
+.walls::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to top, #8b4513, #cd853f);
+}
+
+.wall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12%;
+  position: relative;
+  z-index: 1;
+  min-height: 50px;
+}
+
+.wall-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.wall-body {
+  width: 100%;
+  background-color: #808080;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.wall-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(335deg, #707070 23px, transparent 23px),
+    linear-gradient(155deg, #505050 23px, transparent 23px),
+    linear-gradient(335deg, #707070 23px, transparent 23px),
+    linear-gradient(155deg, #505050 23px, transparent 23px);
+  background-size: 58px 58px;
+  background-position:
+    0px 2px,
+    4px 35px,
+    29px 31px,
+    34px 6px;
+}
+
+.crenellation {
+  width: 25%;
+  height: 20px;
+  background-color: inherit;
+  display: inline-block;
+  margin: 0 2.5%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Update solidity classes to have a very low wall for progress 0 */
+.solidity-0 .wall-body {
+  height: 2px; /* Very low wall for 0 progress */
+}
+.solidity-1 .wall-body {
+  height: 25px;
+}
+.solidity-2 .wall-body {
+  height: 50px;
+}
+.solidity-3 .wall-body {
+  height: 75px;
+}
+.solidity-4 .wall-body {
+  height: 100px;
+}
+.solidity-5 .wall-body {
+  height: 125px;
+}
+.solidity-6 .wall-body {
+  height: 150px;
+}
+.solidity-7 .wall-body {
+  height: 175px;
+}
+.solidity-8 .wall-body {
+  height: 200px;
+}
+.solidity-9 .wall-body {
+  height: 225px;
+}
+.solidity-10 .wall-body {
+  height: 250px;
+}
+.solidity-11 .wall-body {
+  height: 275px;
+}
+.solidity-12 .wall-body {
+  height: 300px;
+}
+
+/* Fortification styles */
+.fortification {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-color: #606060;
+  border-top: 2px solid #505050;
+  border-bottom: 2px solid #505050;
+}
+
+.fortification::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, #505050 2px, transparent 2px);
+  background-size: 10px 10px;
+}
+
+.fortification-0 .fortification {
+  display: none;
+}
+.fortification-1 .level-1 {
+  bottom: 16.67%;
+}
+.fortification-2 .level-1 {
+  bottom: 20%;
+}
+.fortification-2 .level-2 {
+  bottom: 13.33%;
+}
+.fortification-3 .level-1 {
+  bottom: 25%;
+}
+.fortification-3 .level-2 {
+  bottom: 16.67%;
+}
+.fortification-3 .level-3 {
+  bottom: 8.33%;
+}
+.fortification-4 .level-1 {
+  bottom: 30%;
+}
+.fortification-4 .level-2 {
+  bottom: 20%;
+}
+.fortification-4 .level-3 {
+  bottom: 10%;
+}
+.fortification-4 .level-4 {
+  bottom: 0%;
+}
+.fortification-5 .level-1 {
+  bottom: 33.33%;
+}
+.fortification-5 .level-2 {
+  bottom: 25%;
+}
+.fortification-5 .level-3 {
+  bottom: 16.67%;
+}
+.fortification-5 .level-4 {
+  bottom: 8.33%;
+}
+.fortification-5 .level-5 {
+  bottom: 0%;
+}
+.fortification-6 .level-1 {
+  bottom: 41.67%;
+}
+.fortification-6 .level-2 {
+  bottom: 33.33%;
+}
+.fortification-6 .level-3 {
+  bottom: 25%;
+}
+.fortification-6 .level-4 {
+  bottom: 16.67%;
+}
+.fortification-6 .level-5 {
+  bottom: 8.33%;
+}
+.fortification-6 .level-6 {
+  bottom: 0%;
+}
+
+.day-label {
+  margin-top: 10px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  color: #333;
+}
+
+/* Add this to your existing Wall.css file */
+
+.red-x {
+  color: red;
+  font-size: 3em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Change this from center to flex-end */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding-bottom: 10px; /* Add some padding at the bottom */
+}

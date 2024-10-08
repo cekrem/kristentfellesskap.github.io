@@ -1,12 +1,5 @@
 import Weekday from './Weekday.jsx';
-
-const Prayer = () => (
-  <div className="weekdays">
-    {week.map((day) => (
-      <Weekday key={day} day={day} />
-    ))}
-  </div>
-);
+import Wall from './Wall.jsx';
 
 const week = [
   'Mandag',
@@ -17,5 +10,21 @@ const week = [
   'Lørdag',
   'Søndag',
 ];
+
+const Prayer = () => (
+  <>
+    <div className="walls">
+      {week.map((day) => (
+        <Wall key={day} day={day} />
+      ))}
+    </div>
+
+    <div className="weekdays">
+      {week.map((day) => (
+        <Weekday key={day} day={day} />
+      ))}
+    </div>
+  </>
+);
 
 export default Prayer;
